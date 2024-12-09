@@ -5,13 +5,13 @@ import "./ListProduct.css"
 const ListProduct = () => {
     const [allproducts, setallproducts] = useState([]);
     const fetchInfo = async () => {
-        await fetch('http://localhost:4000/allproducts').then((resp) => resp.json()).then((data) => { setallproducts(data) })
+        await fetch('https://westeros-backend.onrender.com').then((resp) => resp.json()).then((data) => { setallproducts(data) })
     }
     useEffect(() => {
         fetchInfo()
     }, [])
     const removeproduct = async (id) => {
-        await fetch('http://localhost:4000/removeproduct', {
+        await fetch('https://westeros-backend.onrender.com', {
             method: 'POST',
             headers: {
                 Accept: 'aplication/json',
