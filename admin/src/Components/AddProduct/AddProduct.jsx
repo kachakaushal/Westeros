@@ -34,7 +34,7 @@ const AddProduct = () => {
         if (responceData.success) {
             product.image = responceData.image_url;
             console.log(product);
-            await fetch('http://localhost:4000/addproduct', {
+            await fetch('https://westeros-backend.onrender.com/addproduct', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
