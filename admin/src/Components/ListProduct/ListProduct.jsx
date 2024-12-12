@@ -11,7 +11,7 @@ const ListProduct = () => {
         fetchInfo()
     }, [])
     const removeproduct = async (id) => {
-        await fetch('https://westeros-backend.onrender.com', {
+        await fetch('https://westeros-backend.onrender.com/removeproduct', {
             method: 'POST',
             headers: {
                 Accept: 'aplication/json',
