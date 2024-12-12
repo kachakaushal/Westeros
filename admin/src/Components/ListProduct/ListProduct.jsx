@@ -5,7 +5,7 @@ import "./ListProduct.css"
 const ListProduct = () => {
     const [allproducts, setallproducts] = useState([]);
     const fetchInfo = async () => {
-        await fetch('https://westeros-backend.onrender.com').then((resp) => resp.json()).then((data) => { setallproducts(data) })
+        await fetch('https://westeros-backend.onrender.com/allproducts').then((resp) => resp.json()).then((data) => { setallproducts(data) })
     }
     useEffect(() => {
         fetchInfo()
