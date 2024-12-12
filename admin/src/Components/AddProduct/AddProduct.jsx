@@ -24,7 +24,7 @@ const AddProduct = () => {
         let formData = new FormData();
         formData.append('product', image);
 
-        await fetch('https://westeros-backend.onrender.com', {
+        await fetch('https://westeros-backend.onrender.com/uplord', {
             method: 'POST',
             headers: {
                 Accept: 'application/json'
