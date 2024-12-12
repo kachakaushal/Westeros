@@ -16,7 +16,7 @@ const ShopContextProvider = (props) => {
     const [CartItems, setCrtItems] = useState(GetDefaultCart())
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts').then((response) => response.json()).then((data) => setAll_Product(data))
+        fetch('https://westeros-backend.onrender.com/allproducts').then((response) => response.json()).then((data) => setAll_Product(data))
 
         if (localStorage.getItem('auth-token')) {
             fetch('http://localhost:4000/getcart', {
@@ -34,7 +34,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId) => {
         setCrtItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('https://westeros-backend.onrender.com/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -50,7 +50,7 @@ const ShopContextProvider = (props) => {
     const RemoveFromCart = (itemId) => {
         setCrtItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('https://westeros-backend.onrender.com/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
