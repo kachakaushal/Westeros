@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(cors())
 
 //database connection
-mongoose.connect('mongodb+srv://kaushal19:kaushal1919@cluster0.nn5eu.mongodb.net/e-com')
+mongoose.connect('')
 
 //api creation
 app.get("/", (req, res) => {
